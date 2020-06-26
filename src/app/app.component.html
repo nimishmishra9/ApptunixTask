@@ -1,0 +1,21 @@
+
+<div class="content" role="main">
+  <div class="card-container" >
+    <div *ngFor="let img of Imagedata">
+    
+      <div class="card img-download" [ngStyle]="{'background-color':img.backgroundColor}"  (click)="showImage(img.id)">
+         <img class="imgagestag"
+         alt="Image has been deleted"
+         [src]=img.location 
+         [ngStyle]="{'display':img.display}"
+         /> 
+          <div class="top-left" (click)="deleteImage(img.id)"><i class="fa fa-trash deletebtn" aria-hidden="true"></i>
+        </div>
+    </div> 
+    </div>
+  </div>
+</div>
+<b>Note :</b> <u> 
+  <li>When user will click on the Box then there will be Image will show and hide</li>
+  <li>When user clicks on the delete icon Image will get deleted even image is visible or hide</li>
+        </u>
